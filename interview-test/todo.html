@@ -211,8 +211,8 @@
         });
 
         //Setting up OnClick Listener for Delete row actions
-        $('#deleteButton').on('click', function () {
-            todoTable.row(this).remove().draw();
+        $('#todotable').on('click','tbody button', function () {
+            todoTable.row(this.closest('tr')).remove().draw();
         });
 
 
