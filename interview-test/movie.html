@@ -130,8 +130,8 @@
         movieTable = $('#movietable').DataTable();
 
         //Setting up OnClick Listener for Delete row actions
-        $('#movietable').on('click', 'tbody tr', function () {
-            movieTable.row(this).remove().draw();
+        $('#movietable').on('click', 'tbody button', function () {
+            movieTable.row(this.closest('tr')).remove().draw();
         });
 
         //Setting up OnClick Listener on Load Button
